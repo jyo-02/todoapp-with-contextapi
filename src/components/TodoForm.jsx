@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { useTodo } from '../context/TodoContext'
 
 function TodoForm() {
-    //first we bring the context useTodo hook
+    //first we import the stuff context using the useTodo hook
     const {addTodo} = useTodo()
     const [todo, setTodo] = useState("")
     

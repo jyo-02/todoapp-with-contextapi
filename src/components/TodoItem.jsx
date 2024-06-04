@@ -2,8 +2,14 @@ import React, { useState } from 'react'
 import { useTodo } from '../context/TodoContext';
 
 function TodoItem({ todo }) {
+
+  //to define state to see if the todo is editable  
   const [isTodoEditable, setIsTodoEditable] = useState(false)
+
+  //we change the state when we edit, todoMsg stores the newly input todo after update and passes it to editTodo below
   const [todoMsg, setTodoMsg] = useState(todo.todo)
+
+  //importing the stuff from context using useTodo Hook
   const {updateTodo, deleteTodo, toggleComplete} = useTodo()
 
   const editTodo = () => {
